@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo-sakura-前尘忆梦使用指南</title>
+    <url>/hexo-sakura-qian-chen-yi-meng-shi-yong-zhi-nan/</url>
+    <content><![CDATA[<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://www.hojun.cn/">hojun</a>制作的hexo主题<a href="https://www.hojun.cn/2019/02/20/cknemlo4n006luwtuaq85f0x1/">Sakura</a>。该主题移植于WordPress主题Sakura，原作者<a href="https://2heng.xin/">Mashiro</a>。</li>
+<li><a href="https://mp.weixin.qq.com/s/OAyOA28-bTJLE6aKtzpoqg"> wallleap</a>制作的基于Hexo的Sakura主题美化</li>
+<li><a href="https://cungudafa.js.org/">cungudafa</a>制作的<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus">hexo-theme-sakuraplus</a></li>
+</ul>
+<h1 id="主题配置详解-config-yml"><a href="#主题配置详解-config-yml" class="headerlink" title="主题配置详解_config.yml"></a>主题配置详解_config.yml</h1><h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="修改标题名称"><a href="#修改标题名称" class="headerlink" title="修改标题名称"></a>修改标题名称</h3><ul>
+<li><pre><code># 修改标题名称
+prefixName: 前尘忆梦
+siteName: 亓弋卬
+</code></pre>
+图例：<br><img src="%E5%9B%BE%E4%BE%8B-%E4%BF%AE%E6%94%B9%E6%A0%87%E9%A2%98%E5%90%8D%E7%A7%B0.jpg"></li>
+</ul>
+<h3 id="修改网站头像和网站图标"><a href="#修改网站头像和网站图标" class="headerlink" title="修改网站头像和网站图标"></a>修改网站头像和网站图标</h3><ul>
+<li><pre><code># 修改网站头像和网站图标
+favicon: /offline/img/fa-av/favicon.png
+avatar: /offline/img/fa-av/avatar.png
+</code></pre>
+图例：<br><img src="%E5%9B%BE%E4%BE%8B-%E4%BF%AE%E6%94%B9%E5%A4%B4%E5%83%8F%E5%92%8C%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.jpg"></li>
+</ul>
+<h3 id="修改网站头像指向的链接"><a href="#修改网站头像指向的链接" class="headerlink" title="修改网站头像指向的链接"></a>修改网站头像指向的链接</h3><ul>
+<li><pre><code># 修改网站头像指向的链接。（点击网站头像会弹出的网站链接。）
+url: https://qiyiang0.github.io
+</code></pre>
+</li>
+</ul>
+<h3 id="修改网站描述"><a href="#修改网站描述" class="headerlink" title="修改网站描述"></a>修改网站描述</h3><ul>
+<li><pre><code># 修改网站描述
+description: 留下思索，分享感悟。
+</code></pre>
+</li>
+</ul>
+<h2 id="导航设置"><a href="#导航设置" class="headerlink" title="导航设置"></a>导航设置</h2><h3 id="导航代码解析"><a href="#导航代码解析" class="headerlink" title="导航代码解析"></a>导航代码解析</h3><ul>
+<li>menus: #定义一个导航<br>首页:  #导航名称<br>{path: /} #这里指的路径为：<a href="http://localhost:4000/">http://localhost:4000/</a><br>{fa: fa-fort-awesome} #<a href="http://www.fontawesome.com.cn/faicons/">导航图标</a><pre><code class="示例：">menus: #定义一个导航
+首页: &#123; path: /, fa: fa-fort-awesome&#125;
+</code></pre>
+submenus: {} #子分类，{}里可以嵌套一个导航。<pre><code class="示例：">分类: &#123;path: /categories/, fa: fa-bookmark, submenus: &#123;
+  生活: &#123;path: /categories/生活/, fa: fa-file-text-o &#125;&#125;
+</code></pre>
+</li>
+</ul>
+<h3 id="前尘忆梦的导航代码"><a href="#前尘忆梦的导航代码" class="headerlink" title="前尘忆梦的导航代码"></a>前尘忆梦的导航代码</h3><ul>
+<li><pre><code>menus: #导航
+首页: &#123; path: /, fa: fa-fort-awesome&#125; 
+分类: &#123;path: /categories/, fa: fa-bookmark, submenus: &#123;
+  生活: &#123;path: /categories/生活/, fa: fa-file-text-o &#125;,
+  前尘: &#123;path: /categories/前尘/, fa: fa-file &#125;, 
+  资源: &#123;path: /categories/资源/, fa: fa-cloud-download &#125;,
+  随想: &#123;path: /categories/随想/, fa: fa-commenting-o &#125;,
+  转载: &#123;path: /categories/转载/, fa: fa-book &#125;&#125;&#125;
+技能: &#123;path: /bangumi/, fa: fa-clipboard  &#125;
+标签: &#123;path: /tags/, fa: fa-tag &#125;
+归档: &#123; path: /archives, fa: fa-archive faa-shake&#125;
+留言板: &#123; path: /comment/, fa: fa-pencil-square-o faa-tada &#125;
+山海经: &#123; path: /links/, fa: fa-link faa-shake &#125;
+赞赏: &#123; path: /donate/, fa: fa-heart faa-pulse &#125;
+关于: &#123; path: /about/, fa: fa-leaf faa-wrench &#125;
+</code></pre>
+图例：<br><img src="%E5%9B%BE%E4%BE%8B-%E4%BF%AE%E6%94%B9%E5%AF%BC%E8%88%AA%E6%A0%8F.jpg"></li>
+</ul>
+<h2 id="首屏开启关闭设置"><a href="#首屏开启关闭设置" class="headerlink" title="首屏开启关闭设置"></a>首屏开启关闭设置</h2><ul>
+<li><pre><code>OpenScreen: true # true 开启，false 关闭
+</code></pre>
+</li>
+</ul>
+<h2 id="首屏背景设置"><a href="#首屏背景设置" class="headerlink" title="首屏背景设置"></a>首屏背景设置</h2><h3 id="修改首屏背景图片"><a href="#修改首屏背景图片" class="headerlink" title="修改首屏背景图片"></a>修改首屏背景图片</h3><ul>
+<li><pre><code>bg:
+- /offline/img/cover/(1).jpg
+- /offline/img/cover/(2).jpg
+- /offline/img/cover/(3).jpg
+</code></pre>
+图片存放在本地目录位置：sakura主题根目录下的source文件夹里寻找对应目录。</li>
+</ul>
+<h3 id="修改首屏背景图片样式"><a href="#修改首屏背景图片样式" class="headerlink" title="修改首屏背景图片样式"></a>修改首屏背景图片样式</h3><ul>
+<li><pre><code>bgclass: filter-grid  #空为原图效果，filter-grid 为横条，filter-dot为点点
+</code></pre>
+</li>
+</ul>
+<h2 id="首屏今日诗词开启关闭设置"><a href="#首屏今日诗词开启关闭设置" class="headerlink" title="首屏今日诗词开启关闭设置"></a>首屏今日诗词开启关闭设置</h2><ul>
+<li><pre><code>DesJin: true  # true 开启，false 关闭
+</code></pre>
+</li>
+</ul>
+<h2 id="首屏社交设置"><a href="#首屏社交设置" class="headerlink" title="首屏社交设置"></a>首屏社交设置</h2><h3 id="PC端配置"><a href="#PC端配置" class="headerlink" title="PC端配置"></a>PC端配置</h3><ul>
+<li><pre><code>social:
+github: &#123;url: https://github.com/qiyiang0, img: /offline/img/social/github.png&#125;
+qq: &#123;url: https://wpa.qq.com/msgrd?v=3&amp;uin=1041522278&amp;site=qq&amp;menu=yes, img: /offline/img/social/qq.png&#125;
+sina: &#123;url: https://weibo.com/pubgbht, img: /offline/img/social/sina.png&#125;
+email: &#123;url: mailto:1041522278@qq.com, img: /offline/img/social/email.svg&#125;
+</code></pre>
+</li>
+</ul>
+<h3 id="移动端配置"><a href="#移动端配置" class="headerlink" title="移动端配置"></a>移动端配置</h3><ul>
+<li><pre><code>msocial:
+github: &#123;url: http://github.com/qiyiang0, fa: fa-github, color: 333&#125;
+weibo: &#123;url: http://weibo.com/pubgbht, fa: fa-weibo, color: dd4b39&#125;
+qq: &#123;url: https://wpa.qq.com/msgrd?v=3&amp;uin=157595002&amp;site=qq&amp;menu=yes, fa: fa-qq, color: 25c6fe&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="首屏视频设置"><a href="#首屏视频设置" class="headerlink" title="首屏视频设置"></a>首屏视频设置</h2><ul>
+<li><pre><code>movies:
+url: /offline/mp4
+# 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+name: Unbroken.mp4
+</code></pre>
+</li>
+</ul>
+<h2 id="通知设置"><a href="#通知设置" class="headerlink" title="通知设置"></a>通知设置</h2><ul>
+<li><pre><code>notice: 最近比较忙   #notice值为空，则显示随机一言电影台词。
+</code></pre>
+</li>
+</ul>
+<h2 id="传送点设置"><a href="#传送点设置" class="headerlink" title="传送点设置"></a>传送点设置</h2><h3 id="修改传送点名称"><a href="#修改传送点名称" class="headerlink" title="修改传送点名称"></a>修改传送点名称</h3><ul>
+<li><pre><code>startdashName: 传送点
+</code></pre>
+图例：<br><img src="%E5%9B%BE%E4%BE%8B-%E4%BF%AE%E6%94%B9%E4%BC%A0%E9%80%81%E7%82%B9%E5%90%8D%E7%A7%B0.jpg"></li>
+</ul>
+<h3 id="修改传送点"><a href="#修改传送点" class="headerlink" title="修改传送点"></a>修改传送点</h3><ul>
+<li>链接、标题、描述、图片<pre><code class="示例：">startdash: 
+- &#123;url: /categories/前尘/, title: 前尘, desc: 我是ad, img: /offline/img/startdash/qian-chen.jpg&#125;
+- &#123;url: /categories/随想/, title: 随想, desc: 我是辅助, img: /offline/img/startdash/sui-xiang.jpg&#125;
+- &#123;url: /categories/资源/, title: 资源, desc: 我是工具人, img: /offline/img/startdash/zi-yuan.jpg&#125;
+</code></pre>
+图例：<br><img src="%E5%9B%BE%E4%BE%8B-%E4%BF%AE%E6%94%B9%E4%BC%A0%E9%80%81%E7%82%B9.jpg"></li>
+</ul>
+<h2 id="文章设置"><a href="#文章设置" class="headerlink" title="文章设置"></a>文章设置</h2><ul>
+<li><pre><code>homeName: 无字天书 #文章命名
+homePageSortType: -1 #取值-1 新文章排序最前。 取值1 旧文章排序最前。
+homeArticleShown:  10 #取值范围1-10 首页显示文章数量。  
+</code></pre>
+</li>
+</ul>
+<h2 id="网站底部信息设置"><a href="#网站底部信息设置" class="headerlink" title="网站底部信息设置"></a>网站底部信息设置</h2><ul>
+<li><pre><code>siteBuildingTime: 4/16/2021 #统计建站时间
+copyear: Copyright@2021     #版权所属时间
+copname: 亓弋卬               #网站所属人
+</code></pre>
+</li>
+</ul>
+<h2 id="赞赏设置"><a href="#赞赏设置" class="headerlink" title="赞赏设置"></a>赞赏设置</h2><ul>
+<li><pre><code>donate:
+alipay: /offline/img/custom/donate/AliPayQiYiAng.png
+wechat: /offline/img/custom/donate/WeChanQiYiAng.png
+</code></pre>
+</li>
+</ul>
+<h2 id="音乐列表设置"><a href="#音乐列表设置" class="headerlink" title="音乐列表设置"></a>音乐列表设置</h2><ul>
+<li><pre><code>aplayer: 
+id: 2873379741 #网易歌单id
+server: netease
+type: playlist
+fixed: true
+autoplay: false
+loop: all
+order: random
+preload: auto
+volume: 0.7
+mutex: true
+</code></pre>
+</li>
+</ul>
+<h1 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h1>]]></content>
+      <categories>
+        <category>前尘</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>生活测试</title>
+    <url>/hexo-sakura-sheng-huo-ce-shi/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>指南</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随想测试</title>
+    <url>/hexo-sakura-sui-xiang-ce-shi/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>随想</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>资源测试</title>
+    <url>/hexo-sakura-zi-yuan-ce-shi/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>大海</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>转载测试</title>
+    <url>/hexo-sakura-zhuan-zai-ce-shi/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>转载</category>
+      </categories>
+  </entry>
+</search>
